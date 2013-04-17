@@ -100,6 +100,7 @@ enum actionSheetButtonIndex {
 // This method is only used in modal mode
 -(void) initTitleBar {
     UIBarButtonItem *buttonDone = [[UIBarButtonItem alloc] initWithTitle:modalDismissButtonTitle style:UIBarButtonItemStyleBordered target:self action:@selector(dismissController)];
+    buttonDone.tintColor = [UIColor colorWithRed:150.0/255.0 green:150.0/255.0 blue:150.0/255.0 alpha:1.0];
     
     UINavigationItem *titleBar = [[UINavigationItem alloc] initWithTitle:@""];
     titleBar.leftBarButtonItem = buttonDone;

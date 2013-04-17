@@ -212,7 +212,7 @@ enum actionSheetButtonIndex {
         showPageTitleOnTitleBar = YES;
         showReloadButton = YES;
         showActionButton = YES;
-        modalDismissButtonTitle = NSLocalizedString(@"Done", nil);
+        modalDismissButtonTitle = NSLocalizedString(@"_Done", nil);
         forcedTitleBarText = nil;
         barStyle = UIBarStyleDefault;
 		barTintColor = nil;
@@ -354,14 +354,14 @@ enum actionSheetButtonIndex {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] init];
     actionSheet.title = urlString;
     actionSheet.delegate = self;
-    [actionSheet addButtonWithTitle:NSLocalizedString(@"Open in Safari", nil)];
+    [actionSheet addButtonWithTitle:NSLocalizedString(@"_Open_in_Safari", nil)];
     
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome://"]]) {
         // Chrome is installed, add the option to open in chrome.
-        [actionSheet addButtonWithTitle:NSLocalizedString(@"Open in Chrome", nil)];
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"_Open_in_Chrome", nil)];
     }
     
-    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"_Cancel", nil)];
 	actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     
     if (mode == TSMiniWebBrowserModeTabBar) {
@@ -539,11 +539,11 @@ enum actionSheetButtonIndex {
     }
 	
     // Show error alert
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Could not load page", nil)
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"_Could_not_load_page", nil)
                                                     message:error.localizedDescription
                                                    delegate:self
                                           cancelButtonTitle:nil
-                                          otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
+                                          otherButtonTitles:NSLocalizedString(@"_Accept", nil), nil];
 	[alert show];
 }
 

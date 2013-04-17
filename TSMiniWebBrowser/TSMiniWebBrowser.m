@@ -354,11 +354,11 @@ enum actionSheetButtonIndex {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] init];
     actionSheet.title = urlString;
     actionSheet.delegate = self;
-    [actionSheet addButtonWithTitle:NSLocalizedString(@"_Open_in_Safari", nil)];
+    [actionSheet addButtonWithTitle:NSLocalizedString(@"_Open_in_safari", nil)];
     
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"googlechrome://"]]) {
         // Chrome is installed, add the option to open in chrome.
-        [actionSheet addButtonWithTitle:NSLocalizedString(@"_Open_in_Chrome", nil)];
+        [actionSheet addButtonWithTitle:NSLocalizedString(@"_Open_in_chrome", nil)];
     }
     
     actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"_Cancel", nil)];

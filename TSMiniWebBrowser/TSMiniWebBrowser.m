@@ -289,11 +289,13 @@ enum actionSheetButtonIndex {
     
     // Restore navigationBar bar style.
     if (mode == TSMiniWebBrowserModeNavigation) {
-        self.navigationController.navigationBar.barStyle = originalBarStyle;
-    }
     
-    // Restore Status bar style
-    [[UIApplication sharedApplication] setStatusBarStyle:originalBarStyle animated:NO];
+        self.navigationController.navigationBar.barStyle = originalBarStyle;
+        
+        // Restore Status bar style
+        [[UIApplication sharedApplication] setStatusBarStyle:originalBarStyle animated:NO];
+        
+    }
     
     // Stop loading
     [webView stopLoading];
